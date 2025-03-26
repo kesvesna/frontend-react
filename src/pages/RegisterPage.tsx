@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {Navbar} from "../assets/Navbar.tsx";
+import {Layout} from "../components/Layout.tsx";
 
 export const RegisterPage = () => {
     const [email, setEmail] = useState('');
@@ -19,7 +19,7 @@ export const RegisterPage = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            <Navbar/>
+            <Layout>
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
                 <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
                     Создать аккаунт
@@ -116,6 +116,7 @@ export const RegisterPage = () => {
                     </div>
                 </div>
             </div>
+            </Layout>
         </div>
     );
 };
